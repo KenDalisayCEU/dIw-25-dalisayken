@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+</head>
+<body>
+
+<form action="registro.php" method="post" enctype="multipart/form-data">
+
+    <h3>Registro de usuario</h3>
+
+    Usuario:
+    <input type="text" name="usuario" required><br><br>
+
+    Nombre completo:
+    <input type="text" name="nombre" required><br><br>
+
+    Correo:
+    <input type="email" name="correo" required><br><br>
+
+    Contraseña:
+    <input type="password" name="contrasena" required><br><br>
+
+    Fecha de nacimiento:
+    <input type="date" name="fecha" required><br><br>
+
+    Género:<br>
+    <input type="radio" name="genero" value="Masculino" required> Masculino<br>
+    <input type="radio" name="genero" value="Femenino"> Femenino<br>
+    <input type="radio" name="genero" value="Otro"> Otro<br><br>
+
+    Hobby / Intereses:
+    <input type="text" name="hobby" required><br><br>
+
+    País:
+    <input type="text" name="pais" required><br><br>
+
+    Foto de perfil:
+    <input type="file" name="foto" required><br><br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Restablecer">
+
+</form>
+
+</body>
+</html>

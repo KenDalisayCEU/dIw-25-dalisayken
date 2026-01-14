@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta de Satisfacción</title>
+</head>
+<body>
+
+<form action="encuesta.php" method="post">
+
+    <fieldset>
+        <legend>Información personal</legend>
+
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" min="1" max="120" required><br><br>
+
+        <label for="fecha">Fecha de visita:</label><br>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Calificación</legend>
+
+        <label for="calificacion">Calificación (1 a 10):</label><br>
+        <input type="range" id="calificacion" name="calificacion" min="1" max="10" value="5" 
+               oninput="document.getElementById('valorCal').value = this.value" required>
+        <output id="valorCal">5</output><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Servicios utilizados</legend>
+
+        <input type="checkbox" id="restaurante" name="servicios[]" value="Restaurante">
+        <label for="restaurante">Restaurante</label><br>
+
+        <input type="checkbox" id="spa" name="servicios[]" value="Spa">
+        <label for="spa">Spa</label><br>
+
+        <input type="checkbox" id="gimnasio" name="servicios[]" value="Gimnasio">
+        <label for="gimnasio">Gimnasio</label><br>
+
+        <input type="checkbox" id="piscina" name="servicios[]" value="Piscina">
+        <label for="piscina">Piscina</label><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Preferencias</legend>
+
+        <label for="color">Color favorito:</label><br>
+        <input type="color" id="color" name="color" required><br><br>
+    </fieldset>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Restablecer">
+
+</form>
+
+</body>
+</html>

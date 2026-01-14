@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+</head>
+<body>
+
+<form action="contacto.php" method="post">
+
+    <h3>Formulario de contacto</h3>
+
+    Nombre:
+    <input type="text" name="nombre" required><br><br>
+
+    Correo:
+    <input type="email" name="correo" required><br><br>
+
+    Teléfono:
+    <input type="tel" name="telefono" required><br><br>
+
+    Asunto:
+    <input type="text" name="asunto" required><br><br>
+
+    Mensaje:<br>
+    <textarea name="mensaje" rows="4" cols="30" required></textarea><br><br>
+
+    <input type="hidden" name="token" value="token12345">
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Restablecer">
+
+</form>
+
+</body>
+</html>
