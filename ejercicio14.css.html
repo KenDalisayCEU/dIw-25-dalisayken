@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Presentación</title>
+    <style>
+        
+        .tarjeta {
+            width: 350px;         
+            height: 200px;       
+            border: 2mm solid gray; 
+            padding: 10pt;       
+            display: flex;        
+            align-items: center;  
+            gap: 10px;            
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .perfil {
+            width: 2in;           
+            height: 2in;          
+            border-radius: 50%;   
+            object-fit: cover;    
+        }
+
+        
+        .tarjeta h1 {
+            font-size: 24pt;      
+            margin: 0;
+        }
+
+        
+        .tarjeta p {
+            font-size: 15pt;      
+            margin: 5px 0 0 0;
+        }
+
+        
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta">
+        <img src="https://via.placeholder.com/150" alt="Foto de Perfil" class="perfil">
+        <div class="info">
+            <h1>Ken Dalisay</h1>
+            <p>Desarrollador web, técnico en sistemas y Retail Investor</p>
+        </div>
+    </div>
+
+</body>
+</html>

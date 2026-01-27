@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Contacto</title>
+
+    <style>
+        :root {
+            --color-primario: #4a90e2;
+            --color-error: #e74c3c;
+            --color-fondo: #f9f9f9;
+            --color-texto: #333;
+
+            --fuente-base: 16px;
+            --espacio-base: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+        }
+
+        form {
+            width: 320px;
+            padding: calc(var(--espacio-base) * 2);
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            display: block;
+            margin-top: var(--espacio-base);
+        }
+
+        label.requerido::after {
+            content: " *";
+            color: var(--color-error);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            font-size: var(--fuente-base);
+            padding: var(--espacio-base);
+            margin-top: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--color-primario);
+            background-color: #eef5ff;
+        }
+
+        input:invalid,
+        textarea:invalid {
+            border-color: var(--color-error);
+        }
+
+        input:invalid:focus,
+        textarea:invalid:focus {
+            background-color: #ffecec;
+        }
+
+        button {
+            margin-top: calc(var(--espacio-base) * 2);
+            padding: var(--espacio-base);
+            width: 100%;
+            font-size: var(--fuente-base);
+            background-color: #ccc;
+            border: none;
+            cursor: pointer;
+        }
+
+        form:valid button {
+            background-color: var(--color-primario);
+            color: white;
+        }
+
+        ::selection {
+            background-color: var(--color-primario);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Contacto</h1>
+
+    <form>
+        <label class="requerido">
+            Nombre
+            <input type="text" placeholder="Escribe tu nombre" required>
+        </label>
+
+        <label class="requerido">
+            Correo electrónico
+            <input type="email" placeholder="correo@ejemplo.com" required>
+        </label>
+
+        <label class="requerido">
+            Mensaje
+            <textarea placeholder="Tu mensaje" required></textarea>
+        </label>
+
+        <button type="submit">Enviar</button>
+    
+    </form>
+
+</body>
+</html>

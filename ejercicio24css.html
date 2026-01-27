@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarjeta perfil</title>
+
+    <style>
+        
+        :root {
+            --color-primario: #3498db;
+            --color-secundario: #2ecc71;
+            --color-fondo: #f4f4f4;
+            --color-texto: #333;
+            --espacio-base: 16px;
+        }
+
+        body {
+            background-color: var(--color-fondo);
+            font-family: Arial, sans-serif;
+        }
+
+       
+        .tarjeta {
+            background-color: white;
+            width: 300px;
+            padding: var(--espacio-base);
+            margin: 40px auto;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+
+        
+        .tarjeta:hover {
+            background-color: var(--color-secundario);
+        }
+
+        
+        .tarjeta img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        
+        .nombre {
+            margin-top: var(--espacio-base);
+            color: var(--color-texto);
+        }
+
+        
+        .nombre::before {
+            content: "👤 ";
+        }
+
+        /
+        .bio {
+            margin: var(--espacio-base) 0;
+            color: var(--color-texto);
+        }
+
+        
+        .bio::first-letter {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--color-primario);
+        }
+
+        
+        .boton {
+            background-color: var(--color-primario);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        
+        .boton:active {
+            background-color: #1f6fa8;
+        }
+
+        
+        .boton::after {
+            content: " ➜";
+        }
+
+        
+        .tarjeta a {
+            color: var(--color-primario);
+            text-decoration: none;
+        }
+
+        .tarjeta a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tarjeta">
+        <img src="c:\Users\cyrus\Documents\ejercicios\Sin título.png" alt="Foto de perfil">
+
+        <h2 class="nombre">Ken Dalisay</h2>
+
+        <p class="biografia">
+            Desarrollador web y técnico en sistemas.
+        </p>
+
+        <button class="boton">Seguir</button>
+
+        <p>
+            <a href="https://es.linkedin.com/in/ken-palomeno-8665a8307">Ver perfil</a>
+        </p>
+    </div>
+
+</body>
+</html>

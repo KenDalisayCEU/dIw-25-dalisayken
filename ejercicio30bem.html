@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 30 - BEM</title>
+    <style>
+      button {
+        padding: 12px 24px;
+        border-radius: 50px;
+        border: 2px solid;
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px;
+        font-weight: bold;
+        font-family: sans-serif;
+      }
+
+      .button--primary {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+      }
+
+      .button--secondary {
+        background-color: #6c757d;
+        color: white;
+        border-color: #6c757d;
+      }
+
+      .button--success {
+        background-color: #28a745;
+        color: white;
+        border-color: #28a745;
+      }
+
+      .button--danger {
+        background-color: #dc3545;
+        color: white;
+        border-color: #dc3545;
+      }
+
+      .button--warning {
+        background-color: #ffc107;
+        color: black;
+        border-color: #ffc107;
+      }
+
+      .button--info {
+        background-color: #17a2b8;
+        color: white;
+        border-color: #17a2b8;
+      }
+
+      .button--light {
+        background-color: #f8f9fa;
+        color: black;
+        border-color: #f8f9fa;
+      }
+
+      .button--dark {
+        background-color: #343a40;
+        color: white;
+        border-color: #343a40;
+      }
+
+      .btn::after {
+        content: "4";
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 12px;
+        position: absolute;
+        margin-left: 10px;
+        margin-top: -20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn button--primary">Primary</button>
+      <button class="btn button--secondary">Secondary</button>
+      <button class="btn button--success">Success</button>
+      <button class="btn button--danger">Danger</button>
+      <button class="btn button--warning">Warning</button>
+      <button class="btn button--info">Info</button>
+      <button class="btn button--light">Light</button>
+      <button class="btn button--dark">Dark</button>
+    </div>
+  </body>
+</html>

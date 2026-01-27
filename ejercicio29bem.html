@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 29 - BEM</title>
+    <style>
+      button {
+        padding: 12px 24px;
+        border-radius: 5px;
+        border: 2px solid;
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px;
+        font-weight: bold;
+      }
+
+      .button-blue {
+        background-color: blue;
+        color: white;
+        border-color: blue;
+      }
+
+      .button-blue--outlined {
+        background-color: white;
+        color: blue;
+        border-color: blue;
+      }
+
+      .button-blue--text {
+        background-color: transparent;
+        color: blue;
+        border-color: transparent;
+        font-family: sans-serif;
+      }
+
+      .button-orange {
+        background-color: orange;
+        color: white;
+        border-color: orange;
+      }
+
+      .button-orange--outlined {
+        background-color: white;
+        color: orange;
+        border-color: orange;
+      }
+
+      .button-orange--text {
+        background-color: transparent;
+        color: orange;
+        border-color: transparent;
+        font-family: sans-serif;
+      }
+
+      .button-red {
+        background-color: red;
+        color: white;
+        border-color: red;
+      }
+
+      .button-red--outlined {
+        background-color: white;
+        color: red;
+        border-color: red;
+      }
+
+      .button-red--text {
+        background-color: transparent;
+        color: red;
+        border-color: transparent;
+        font-family: sans-serif;
+      }
+
+      .container {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="button-blue">Más información</button>
+      <button class="button-blue--outlined">Más información</button>
+      <a href="#" class="button-blue--text">Más información</a>
+    </div>
+
+    <div class="container">
+      <button class="button-orange">Más información</button>
+      <button class="button-orange--outlined">Más información</button>
+      <a href="#" class="button-orange--text">Más información</a>
+    </div>
+
+    <div class="container">
+      <button class="button-red">Más información</button>
+      <button class="button-red--outlined">Más información</button>
+      <a href="#" class="button-red--text">Más información</a>
+    </div>
+  </body>
+</html>

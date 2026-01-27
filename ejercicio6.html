@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+
+    <h1>Imagen con etiqueta &lt;picture&gt;</h1>
+
+    <picture>
+        
+        <source 
+            media="(min-width: 800px)" 
+            srcset="https://via.placeholder.com/800x600">
+
+        
+        <source 
+            media="(min-width: 500px)" 
+            srcset="https://via.placeholder.com/500x375">
+
+        
+        <img 
+            src="https://via.placeholder.com/600x450" 
+            alt="Imagen adaptable de ejemplo según el tamaño de la pantalla">
+    </picture>
+
+</body>
+</html>

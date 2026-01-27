@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Imágenes</title>
+</head>
+<body>
+  <h1>Galería de Imágenes</h1>
+
+  <section class="galeria" role="region" aria-label="Galería de imágenes">
+    <div id="img1" class="imagen-contenedor" data-imagen-id="1" data-descripcion="Descripción de la imagen 1" tabindex="0" role="button" aria-label="Imagen 1: Descripción de la imagen 1">
+      <img src="c:\Users\cyrus\Documents\ejercicios\Honda-CBR500R-2024-Negro-Gunpower-Mate-Metalizado-1024x724-1.jpg" alt="Imagen 1" title="Descripción de la imagen 1">
+    </div>
+
+
+    <div id="img2" class="imagen-contenedor" data-imagen-id="2" data-descripcion="Descripción de la imagen 2" tabindex="0" role="button" aria-label="Imagen 2: Descripción de la imagen 2">
+      <img src="c:\Users\cyrus\Documents\ejercicios\Ninja_500_g.jpg" alt="Imagen 2" title="Descripción de la imagen 2">
+    </div>
+
+    
+    <div id="img3" class="imagen-contenedor" data-imagen-id="3" data-descripcion="Descripción de la imagen 3" tabindex="0" role="button" aria-label="Imagen 3: Descripción de la imagen 3">
+      <img src="c:\Users\cyrus\Documents\ejercicios\Prueba-del-Peugeot-208-GT-line-130-CV-automático-2020-Rubén-Fidalgo-1.webp" alt="Imagen 3" title="Descripción de la imagen 3">
+    </div>
+
+
+    <div id="img4" class="imagen-contenedor" data-imagen-id="4" data-descripcion="Descripción de la imagen 4" tabindex="0" role="button" aria-label="Imagen 4: Descripción de la imagen 4">
+      <img src="c:\Users\cyrus\Documents\ejercicios\2018-renault-megane-rs-trophy.jpg" alt="Imagen 4" title="Descripción de la imagen 4">
+    </div>
+  </section>
+
+
+  <dialog id="dialogoImagen">
+    <button id="cerrarDialogo">Cerrar</button>
+    <img id="imagenGrande" src="" alt="">
+    <p id="descripcionImagen"></p>
+  </dialog>
+
+  <script>
+   
+    const contenedores = document.querySelectorAll('.imagen-contenedor');
+    const dialogo = document.getElementById('dialogoImagen');
+    const imagenGrande = document.getElementById('imagenGrande');
+    const descripcionImagen = document.getElementById('descripcionImagen');
+    const botonCerrar = document.getElementById('cerrarDialogo');
+
+    contenedores.forEach(div => {
+      
+      div.addEventListener('click', () => {
+        const img = div.querySelector('img');
+        const descripcion = div.getAttribute('data-descripcion');
+        imagenGrande.src = img.src;
+        imagenGrande.alt = img.alt;
+        descripcionImagen.textContent = descripcion;
+        dialogo.showModal();
+      });
+
+      
+      div.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          div.click();
+        }
+      });
+    });
+
+    
+    botonCerrar.addEventListener('click', () => {
+      dialogo.close();
+    });
+  </script>
+</body>
+</html>
