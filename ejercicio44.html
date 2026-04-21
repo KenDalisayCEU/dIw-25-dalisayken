@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Unificado</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 180px);
+            grid-auto-rows: 60px;
+            gap: 1px;
+            background-color: white;
+            border: 1px solid white;
+        }
+
+        .celda {
+            background-color: #607584;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item-1 {
+            grid-column: 1 / span 3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="celda item-1">celda 1</div>
+        <div class="celda">celda 2</div>
+        <div class="celda">celda 3</div>
+        <div class="celda">celda 4</div>
+        <div class="celda">celda 5</div>
+        <div class="celda">celda 6</div>
+        <div class="celda">celda 7</div>
+    </div>
+
+</body>
+</html> 

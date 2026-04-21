@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: white;
+    }
+
+    .main-content {
+      height: calc(100vh - 56px);
+    }
+
+    .carousel,
+    .carousel-inner,
+    .carousel-item {
+      height: 100%;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .navbar {
+      background-color: #87cefa !important;
+    }
+
+    .side-column {
+      background-color: white;
+      padding: 20px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Blog Personal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" data-slide="0">Profile</a></li>
+            <li><a class="dropdown-item" href="#" data-slide="1">Address</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#" data-slide="2">Social</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row main-content">
+    <div class="col-md-3 side-column">
+      <h3>Informacion de mi blog</h3>
+      <p>Este es una de mis aventuras en coche</p>
+    </div>
+
+    <div class="col-md-6 p-0">
+      <div id="carouselanimal" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselanimal" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselanimal" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselanimal" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#carouselanimal" data-bs-slide-to="3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="c:\Users\cyrus\Downloads\1920-x-1080-car-3mdu8qqr7icql88a.jpg" alt="Coche">
+            <div class="carousel-caption">
+              <h5>Coche</h5>
+              <p>Coche bonito y rápido.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="c:\Users\cyrus\Downloads\1920-x-1080-car-pmo6dgk15oyw6syr.jpg" alt="Coche">
+            <div class="carousel-caption">
+              <h5>Coche</h5>
+              <p>Coche elegante.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="c:\Users\cyrus\Downloads\1920-x-1080-car-ej4xl5jnhkvh8nc4.jpg" alt="Coche">
+            <div class="carousel-caption">
+              <h5>Coche</h5>
+              <p>Coche bonito.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="c:\Users\cyrus\Downloads\coche-4k-yduvczxgolxxu1nk.jpg" alt="Coche">
+            <div class="carousel-caption">
+              <h5>Coche</h5>
+              <p>Un coche elegante y ágil.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselanimal" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselanimal" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-md-3 side-column">
+      <h3>INFO</h3>
+      <p>Este es el mi contacto asi puedes contactar conmigo</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
+  const carouselElement = document.getElementById('carouselanimal');
+  const carousel = new bootstrap.Carousel(carouselElement);
+
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', e => {
+      const slideIndex = item.getAttribute('data-slide');
+      if (slideIndex) {
+        e.preventDefault();
+        carousel.to(parseInt(slideIndex));
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
